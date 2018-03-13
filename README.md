@@ -1,7 +1,4 @@
-
-
-
-struct Node {
+    struct Node {
     // default initialization
     Node() : leftChild(nullptr), rightChild(nullptr), parent(nullptr){};
     
@@ -11,5 +8,4 @@ struct Node {
     Node* leftChild;
     Node* rightChild;
     Node* parent;
-
-};
+    };
