@@ -3,8 +3,7 @@
 using namespace std;
 
 // Priority Queue for Huffman Compression using Heap
-class HuffmanPriorityQueue {
-    
+
     Heap myHeap;
     
     int *size;
@@ -74,7 +73,6 @@ class HuffmanPriorityQueue {
         
     }
     
-};
 
 
 

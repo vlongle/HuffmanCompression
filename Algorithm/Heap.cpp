@@ -5,8 +5,7 @@
 using namespace std;
 
 // MIN HEAP
-class Heap {
-    
+
     Node* Dqueue;
     int* size;
     // constructor
@@ -122,5 +121,5 @@ class Heap {
         cout << "-----------"<<  endl;
         
     }
-};
+
     
