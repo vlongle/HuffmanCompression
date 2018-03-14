@@ -1,5 +1,5 @@
 # Huffman Compression
-Written in C++ 
+Written in __C++__
 ## Basic of the Algorithm:
 https://en.wikipedia.org/wiki/Huffman_coding
 
