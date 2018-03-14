@@ -1,9 +1,10 @@
-
+#include "HuffmanPriorityQueue.h"
+#include <iostream>
+using namespace std;
 
 // Priority Queue for Huffman Compression using Heap
 class HuffmanPriorityQueue {
     
-public:
     Heap myHeap;
     
     int *size;
@@ -76,39 +77,4 @@ public:
 };
 
 
-Node* populateQueue(int size)
-{
-    
-    Node* Dqueue = new Node[size];
-    
-    for (int i = 0; i < size; i++) {
-        
-        Node temp = {};
-        
-        cout << "Name: ";
-        
-        cin >> temp.name;
-        
-        cout << "Value: ";
-        
-        cin >> temp.value;
-        Dqueue[i] = temp;
-        
-        cout << endl;
-    }
-    
-    return Dqueue;
-}
 
-void printQueue(Node* Dqueue, int size)
-{
-    
-    for (int i = 0; i < size; i++) {
-        
-        cout << "Name: " << Dqueue[i].name;
-        
-        cout << " Value: " << Dqueue[i].value;
-        
-        cout << endl;
-    }
-}

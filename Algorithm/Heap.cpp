@@ -1,7 +1,12 @@
+
+
+#include <iostream>
+#include "Heap.h"
+using namespace std;
+
 // MIN HEAP
 class Heap {
     
-public:
     Node* Dqueue;
     int* size;
     // constructor

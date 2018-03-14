@@ -1,10 +1,13 @@
-#include <map>;
+#include <map> // for creating map / dictionary
+#include "HuffmanEncoder.h"
+#include <iostream>
+#include "fstream" // for reading file
 using namespace std;
 
 /* Read in txt.file & then make a map (dictionary) of frequency of words appearing
 Then convert the map into a dynamic array of Node object ready to be fed into the Huffman Compression Algorithm
  */
-Node*  populateDict(string filePath){
+Node*  readInData(string filePath){
     ifstream file(filePath);
     char ch;
     map<string, int> dict;
@@ -34,27 +37,7 @@ Node*  populateDict(string filePath){
     
     return Dqueue;
 }
-// Implemementation of Queue needed for BFS tranversal
-#define CAPACITY 9999
-class Queue{
-public:
-    Node* dQueue;
-    int head; // the current USED top of the dArray
-    int tail; // the first UNUSED element
-    Queue(){
-        dQueue = new Node[CAPACITY];
-        head = 0;
-        tail = 0;
-    }
-    void enqueue(Node incoming){
-        dQueue[tail] = incoming;
-        tail +=1;
-    }
-    Node dequeue(){
-        head +=1;
-        return dQueue[head-1];
-    }
-};
+
 
 /* Tranverse the Huffman Tree -- Breadth First Tranversal -- go layer by layer
  and return map (dictionary) of { char (like "a", "b") : codingBits (like "0001", "10010"...)
