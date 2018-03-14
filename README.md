@@ -1,11 +1,7 @@
-    struct Node {
-    // default initialization
-    Node() : leftChild(nullptr), rightChild(nullptr), parent(nullptr){};
-    
-    // data
-    string name;
-    double value;
-    Node* leftChild;
-    Node* rightChild;
-    Node* parent;
-    };
+# Huffman Compression
+Written in C++ 
+## Basic of the Algorithm:
+https://en.wikipedia.org/wiki/Huffman_coding
+
+## Videos (MIT CS 6004, near the end of the lecture)
+https://www.youtube.com/watch?v=CvfifZsmpQ4
