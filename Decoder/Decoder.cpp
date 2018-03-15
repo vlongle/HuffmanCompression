@@ -7,30 +7,28 @@
 
 #include <stdio.h>
 #include "Decoder.h"
-
-
 #include <fstream>
 
-void decoder(string codedFilePath, string decodedFilePath, Node* topNode){
-    ifstream codedFile(codedFilePath);
-    ofstream decodedFile(decodedFilePath);
+void Decoder::decoder(std::string codedFilePath, std::string decodedFilePath, Node* topNode){
+    std::ifstream codedFile(codedFilePath);
+    std::ofstream decodedFile(decodedFilePath);
     while (!codedFile.eof()){
-        string Decoded = "";
+        std::string Decoded = "";
+        Node* current = new Node();
         while (true){
             char ch;
             codedFile >> ch;
-            Node* current = new Node();
             if (ch == '0'){ // left
-                current = topNode -> left;
-                if (current->right == nullptr){
+                current = topNode -> leftChild;
+                if (current->rightChild == nullptr){
                     break; /* break out of While true loop, prefix coding
                             ensures that every char is a leaf !! ---> current -> right
                             is an arbitrary choice. We could have check if current -> left == nullptr*/
                 }
             }
             else{ // 1 is right
-                current = topNode -> right;
-                if (current -> right == nullptr){
+                current = topNode -> rightChild;
+                if (current -> rightChild == nullptr){
                     break;
                 }
             }

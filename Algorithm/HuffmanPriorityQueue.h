@@ -7,6 +7,7 @@
 
 #ifndef HuffmanPriorityQueue_h
 #define HuffmanPriorityQueue_h
+#include "Heap.h"
 class HuffmanPriorityQueue {
 public:
     // Data
@@ -15,7 +16,7 @@ public:
                 use pointer to int instead of primitive int because changes to size in HuffmanPriorityQueue affects size of myHeap
                 */
     // Constructor
-      HuffmanPriorityQueue(Node* passQueue, int *passSize)
+    HuffmanPriorityQueue(Node* passQueue, int *passSize);
     // Methods
     void enqueue(Node incoming);
     Node* dequeue();
@@ -25,5 +26,5 @@ public:
                       then feed the sum back to the tree.
                       Repeat until the Queue only has 1 left -- the ultimate member (sum of all freqs)
                       */
-
+};
 #endif /* HuffmanPriorityQueue_h */

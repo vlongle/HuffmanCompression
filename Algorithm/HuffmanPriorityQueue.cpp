@@ -3,15 +3,10 @@
 using namespace std;
 
 // Priority Queue for Huffman Compression using Heap
-
-    Heap myHeap;
-    
-    int *size;
-    
     
     // constructor
     
-    HuffmanPriorityQueue(Node* passQueue, int *passSize)
+HuffmanPriorityQueue::HuffmanPriorityQueue(Node* passQueue, int *passSize)
     : myHeap(passQueue, passSize)
     {
         
@@ -19,7 +14,7 @@ using namespace std;
     }
     
     
-    void enqueue(Node incoming){
+void HuffmanPriorityQueue::enqueue(Node incoming){
         
         myHeap.Dqueue[*size] = incoming;
         *size +=1;
@@ -29,7 +24,7 @@ using namespace std;
     }
     
     
-    Node* dequeue(){
+Node* HuffmanPriorityQueue::dequeue(){
         myHeap.swap(0, *size-1);
         Node* result = new Node();
         *result = myHeap.Dqueue[*size-1];
@@ -43,7 +38,7 @@ using namespace std;
     
     
     
-    void makeTree(){
+void HuffmanPriorityQueue::makeTree(){
         myHeap.makeHeap();
         
         

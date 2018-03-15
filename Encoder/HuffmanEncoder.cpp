@@ -7,7 +7,7 @@ using namespace std;
 /* Read in txt.file & then make a map (dictionary) of frequency of words appearing
 Then convert the map into a dynamic array of Node object ready to be fed into the Huffman Compression Algorithm
  */
-Node*  readInData(string filePath){
+Node*  Encoder::readInData(string filePath){
     ifstream file(filePath);
     char ch;
     map<string, int> dict;
@@ -24,7 +24,7 @@ Node*  readInData(string filePath){
     file.close();
     
     // Populate queue
-    Node* Dqueue = new Node[size];
+    Node* Dqueue = new Node[dict.size()];
     int i = 0;
     for (map<string, int>:: iterator iter = dict.begin(); iter != dict.end(); iter++) {
         
@@ -43,7 +43,7 @@ Node*  readInData(string filePath){
  and return map (dictionary) of { char (like "a", "b") : codingBits (like "0001", "10010"...)
  */
 
-map<string, string> BFSTranversal(Node topNode){
+map<string, string> Encoder::BFSTranversal(Node topNode){
     Queue myQ;
     myQ.enqueue(topNode);
     map<string, string> dict;

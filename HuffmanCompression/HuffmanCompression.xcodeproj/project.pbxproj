@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4587BB36205B2027004D1518 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4587BB35205B2027004D1518 /* main.cpp */; };
+		4587BB40205B2081004D1518 /* HuffmanPriorityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4587BB3C205B2081004D1518 /* HuffmanPriorityQueue.cpp */; };
+		4587BB41205B2081004D1518 /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4587BB3D205B2081004D1518 /* Heap.cpp */; };
+		4587BB44205B20B9004D1518 /* Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4587BB42205B20B9004D1518 /* Decoder.cpp */; };
+		4587BB47205B20C1004D1518 /* HuffmanEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4587BB45205B20C1004D1518 /* HuffmanEncoder.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4587BB30205B2027004D1518 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4587BB32205B2027004D1518 /* HuffmanCompression */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HuffmanCompression; sourceTree = BUILT_PRODUCTS_DIR; };
+		4587BB35205B2027004D1518 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4587BB3C205B2081004D1518 /* HuffmanPriorityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HuffmanPriorityQueue.cpp; path = ../../Algorithm/HuffmanPriorityQueue.cpp; sourceTree = "<group>"; };
+		4587BB3D205B2081004D1518 /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Heap.cpp; path = ../../Algorithm/Heap.cpp; sourceTree = "<group>"; };
+		4587BB3E205B2081004D1518 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Heap.h; path = ../../Algorithm/Heap.h; sourceTree = "<group>"; };
+		4587BB3F205B2081004D1518 /* HuffmanPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HuffmanPriorityQueue.h; path = ../../Algorithm/HuffmanPriorityQueue.h; sourceTree = "<group>"; };
+		4587BB42205B20B9004D1518 /* Decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Decoder.cpp; path = ../../Decoder/Decoder.cpp; sourceTree = "<group>"; };
+		4587BB43205B20B9004D1518 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Decoder.h; path = ../../Decoder/Decoder.h; sourceTree = "<group>"; };
+		4587BB45205B20C1004D1518 /* HuffmanEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HuffmanEncoder.cpp; path = ../../Encoder/HuffmanEncoder.cpp; sourceTree = "<group>"; };
+		4587BB46205B20C1004D1518 /* HuffmanEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HuffmanEncoder.h; path = ../../Encoder/HuffmanEncoder.h; sourceTree = "<group>"; };
+		4587BB48205B2A95004D1518 /* Hamlet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Hamlet.txt; path = ../../Hamlet.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4587BB2F205B2027004D1518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4587BB29205B2027004D1518 = {
+			isa = PBXGroup;
+			children = (
+				4587BB34205B2027004D1518 /* HuffmanCompression */,
+				4587BB33205B2027004D1518 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4587BB33205B2027004D1518 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4587BB32205B2027004D1518 /* HuffmanCompression */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4587BB34205B2027004D1518 /* HuffmanCompression */ = {
+			isa = PBXGroup;
+			children = (
+				4587BB45205B20C1004D1518 /* HuffmanEncoder.cpp */,
+				4587BB46205B20C1004D1518 /* HuffmanEncoder.h */,
+				4587BB42205B20B9004D1518 /* Decoder.cpp */,
+				4587BB43205B20B9004D1518 /* Decoder.h */,
+				4587BB3D205B2081004D1518 /* Heap.cpp */,
+				4587BB3E205B2081004D1518 /* Heap.h */,
+				4587BB3C205B2081004D1518 /* HuffmanPriorityQueue.cpp */,
+				4587BB3F205B2081004D1518 /* HuffmanPriorityQueue.h */,
+				4587BB35205B2027004D1518 /* main.cpp */,
+				4587BB48205B2A95004D1518 /* Hamlet.txt */,
+			);
+			path = HuffmanCompression;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4587BB31205B2027004D1518 /* HuffmanCompression */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4587BB39205B2027004D1518 /* Build configuration list for PBXNativeTarget "HuffmanCompression" */;
+			buildPhases = (
+				4587BB2E205B2027004D1518 /* Sources */,
+				4587BB2F205B2027004D1518 /* Frameworks */,
+				4587BB30205B2027004D1518 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuffmanCompression;
+			productName = HuffmanCompression;
+			productReference = 4587BB32205B2027004D1518 /* HuffmanCompression */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4587BB2A205B2027004D1518 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Le Nguyen Viet Long";
+				TargetAttributes = {
+					4587BB31205B2027004D1518 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4587BB2D205B2027004D1518 /* Build configuration list for PBXProject "HuffmanCompression" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4587BB29205B2027004D1518;
+			productRefGroup = 4587BB33205B2027004D1518 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4587BB31205B2027004D1518 /* HuffmanCompression */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4587BB2E205B2027004D1518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4587BB41205B2081004D1518 /* Heap.cpp in Sources */,
+				4587BB36205B2027004D1518 /* main.cpp in Sources */,
+				4587BB47205B20C1004D1518 /* HuffmanEncoder.cpp in Sources */,
+				4587BB44205B20B9004D1518 /* Decoder.cpp in Sources */,
+				4587BB40205B2081004D1518 /* HuffmanPriorityQueue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4587BB37205B2027004D1518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4587BB38205B2027004D1518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4587BB3A205B2027004D1518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4587BB3B205B2027004D1518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4587BB2D205B2027004D1518 /* Build configuration list for PBXProject "HuffmanCompression" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4587BB37205B2027004D1518 /* Debug */,
+				4587BB38205B2027004D1518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4587BB39205B2027004D1518 /* Build configuration list for PBXNativeTarget "HuffmanCompression" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4587BB3A205B2027004D1518 /* Debug */,
+				4587BB3B205B2027004D1518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4587BB2A205B2027004D1518 /* Project object */;
+}

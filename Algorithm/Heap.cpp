@@ -6,31 +6,26 @@ using namespace std;
 
 // MIN HEAP
 
-    Node* Dqueue;
-    int* size;
     // constructor
     
-    Heap(Node* passQueue, int *passSize)
-    {
-        
-        Dqueue = passQueue;
-        
-        size = passSize;
-    }
+Heap::Heap(Node* passQueue, int *passSize):
+Dqueue(passQueue),
+size( passSize)
+    {};
     
     // swap two nodes!!
     
-    void swap(int index1, int index2)
+void Heap::swap(int index1, int index2)
     {
         
-        Node temp = Dqueue[index1];
+        struct Node temp = Heap::Dqueue[index1];
         
-        Dqueue[index1] = Dqueue[index2];
+        Heap::Dqueue[index1] = Heap::Dqueue[index2];
         
-        Dqueue[index2] = temp;
+        Heap::Dqueue[index2] = temp;
     }
     
-    bool topDown(int index)
+bool Heap::topDown(int index)
     {
         
         int leftIndex = index * 2 + 1;
@@ -67,7 +62,7 @@ using namespace std;
         return 0;
     }
     
-    bool bottomUp(int index)
+bool Heap::bottomUp(int index)
     {
         
         if (index < *size && index !=0) { // if index is valid in the first place!
@@ -99,7 +94,7 @@ using namespace std;
         return 0;
     }
     
-    void makeHeap()
+void Heap::makeHeap()
     {
         
         for (int i = *size / 2; i >= 0; i--) {
@@ -108,7 +103,7 @@ using namespace std;
     }
     
     
-    void printHeap(){
+void Heap::printHeap(){
         cout << "----------" << endl;
         cout << "This is printHeap()" << endl;
         for (int i = 0; i < *size; ++i){

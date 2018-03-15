@@ -7,18 +7,9 @@
 
 #ifndef Encoder_h
 #define Encoder_h
+#include "HuffmanPriorityQueue.h"
+#include <map>
 
-struct Node {
-    // default initialization
-    Node() : leftChild(nullptr), rightChild(nullptr), parent(nullptr){};
-    
-    // data
-    string name;
-    double value;
-    Node* leftChild;
-    Node* rightChild;
-    Node* parent;
-};
 // Implemementation of Queue needed for BFS tranversal
 // Because the implementation of Queue is quite short, it's included in the header
 #define CAPACITY 9999
@@ -44,7 +35,8 @@ public:
 
 
 class Encoder{
-    Node*  readInData(string filePath);
-    map<string, string> BFSTranversal(Node topNode);
-}
+public:
+    Node*  readInData(std::string filePath);
+    std::map<std::string, std::string> BFSTranversal(Node topNode);
+};
 #endif /* Encoder_h */
