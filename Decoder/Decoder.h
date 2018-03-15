@@ -10,6 +10,6 @@
 
 class Decoder{
 public:
-    
+    void decoder(string codedFilePath, string decodedFilePath, Node* topNode);
 }
 #endif /* Decoder_h */
