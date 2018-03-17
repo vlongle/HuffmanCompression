@@ -27,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45208B8D205C743B009813B5 /* decompressed.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = decompressed.txt; sourceTree = "<group>"; };
+		4530E8FD205C6DB400AB938D /* hamlet.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hamlet.txt; sourceTree = "<group>"; };
+		4530E8FE205C72C700AB938D /* coded.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = coded.txt; sourceTree = "<group>"; };
 		4587BB32205B2027004D1518 /* HuffmanCompression */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HuffmanCompression; sourceTree = BUILT_PRODUCTS_DIR; };
 		4587BB35205B2027004D1518 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4587BB3C205B2081004D1518 /* HuffmanPriorityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HuffmanPriorityQueue.cpp; path = ../../Algorithm/HuffmanPriorityQueue.cpp; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		4587BB43205B20B9004D1518 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Decoder.h; path = ../../Decoder/Decoder.h; sourceTree = "<group>"; };
 		4587BB45205B20C1004D1518 /* HuffmanEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HuffmanEncoder.cpp; path = ../../Encoder/HuffmanEncoder.cpp; sourceTree = "<group>"; };
 		4587BB46205B20C1004D1518 /* HuffmanEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HuffmanEncoder.h; path = ../../Encoder/HuffmanEncoder.h; sourceTree = "<group>"; };
-		4587BB48205B2A95004D1518 /* Hamlet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Hamlet.txt; path = ../../Hamlet.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +73,17 @@
 			isa = PBXGroup;
 			children = (
 				4587BB45205B20C1004D1518 /* HuffmanEncoder.cpp */,
+				4530E8FE205C72C700AB938D /* coded.txt */,
 				4587BB46205B20C1004D1518 /* HuffmanEncoder.h */,
 				4587BB42205B20B9004D1518 /* Decoder.cpp */,
+				4530E8FD205C6DB400AB938D /* hamlet.txt */,
+				45208B8D205C743B009813B5 /* decompressed.txt */,
 				4587BB43205B20B9004D1518 /* Decoder.h */,
 				4587BB3D205B2081004D1518 /* Heap.cpp */,
 				4587BB3E205B2081004D1518 /* Heap.h */,
 				4587BB3C205B2081004D1518 /* HuffmanPriorityQueue.cpp */,
 				4587BB3F205B2081004D1518 /* HuffmanPriorityQueue.h */,
 				4587BB35205B2027004D1518 /* main.cpp */,
-				4587BB48205B2A95004D1518 /* Hamlet.txt */,
 			);
 			path = HuffmanCompression;
 			sourceTree = "<group>";

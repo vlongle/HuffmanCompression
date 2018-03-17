@@ -40,10 +40,6 @@ Node* HuffmanPriorityQueue::dequeue(){
     
 void HuffmanPriorityQueue::makeTree(){
         myHeap.makeHeap();
-        
-        
-        
-
         Node* leftChild = new Node();
         Node* rightChild = new Node();
         Node* newParent = new Node();

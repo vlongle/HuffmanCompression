@@ -1,15 +1,21 @@
+
 #include <iostream>
 #include "HuffmanEncoder.h"
+#include "Decoder.h"
 using namespace std;
 
 
 
 
 int main(){
-    std::string filePath = "Hamlet.txt";
+    // MUST provide full path
+    std::string filePath = "/Users/longle/Desktop/Developers/github/HuffmanCompression/HuffmanCompression/HuffmanCompression/hamlet.txt";
+
     Encoder encoder;
-    encoder.readInData(filePath);
-    
-    
+
+    Node* topNode = encoder.readInData(filePath);
+
+    Decoder decoder;
+    decoder.decoder("/Users/longle/Desktop/Developers/github/HuffmanCompression/HuffmanCompression/HuffmanCompression/coded.txt", "/Users/longle/Desktop/Developers/github/HuffmanCompression/HuffmanCompression/HuffmanCompression/decompressed.txt",  topNode);
     cout << "YEAH" << endl;
 }

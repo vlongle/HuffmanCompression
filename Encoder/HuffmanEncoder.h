@@ -36,7 +36,8 @@ public:
 
 class Encoder{
 public:
-    Node*  readInData(std::string filePath);
+    int* size;
+    Node* readInData(std::string filePath);
     std::map<std::string, std::string> BFSTranversal(Node topNode);
 };
 #endif /* Encoder_h */
