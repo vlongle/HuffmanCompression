@@ -5,3 +5,12 @@ https://en.wikipedia.org/wiki/Huffman_coding
 
 ## Videos (MIT CS 6004, near the end of the lecture)
 https://www.youtube.com/watch?v=CvfifZsmpQ4
+
+## Python Bugs
+Can we write to bin file bit by bit?
+According to https://stackoverflow.com/questions/17536411/write-individual-bits-to-a-file-in-python
+we can't
+
+But 001110 can be treated the same as 1110, which should not happen, if we convert them into int. 
+
+http://bhrigu.me/blog/2017/01/17/huffman-coding-python-implementation/
