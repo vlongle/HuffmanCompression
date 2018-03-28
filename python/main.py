@@ -59,7 +59,6 @@ def tree2codingDict(tree):
     q = queue.Queue()
     q.put(tree)
     name2coding = {}
-    coding2name = {}
     while (q.qsize() != 0):
         parent = q.get()
         left_child = parent.left_child
@@ -70,17 +69,14 @@ def tree2codingDict(tree):
             q.put(left_child)
             if left_child.name != 'sum':
                 name2coding[left_child.name] = left_child.coding
-                coding2name[left_child.coding] = left_child.name
 
         if right_child != None:
             right_child.coding = parent.coding + '1'
             q.put(right_child)
             if right_child.name != 'sum':
                 name2coding[right_child.name] = right_child.coding
-                coding2name[right_child.coding] = right_child.name
 
-    coding2name = {int(keys,2):values for keys, values in coding2name.items()}
-    return (name2coding,coding2name)
+    return name2coding
 
 def decoder():
     print("Decoding ....")
@@ -100,8 +96,9 @@ tree = Huffman_tree(heap)[0][1]
 
 print(tree)
 print(tree.coding)
-name2coding,coding2name = tree2codingDict(tree)
+name2coding = tree2codingDict(tree)
 print(name2coding)
+coding2name = {int(values,2): keys for keys, values in name2coding.items()}
 print(coding2name)
 
 
@@ -114,7 +111,7 @@ with open(file_path) as f:
             break
         # print("dict[c]",dict[c])
         coding = int(name2coding[c],2)
-        print("coding: ",name2coding[c],coding)
+        # print("coding: ",name2coding[c],coding)
         # https://docs.python.org/3.1/library/struct.html#format-characters
         coded_file.write(struct.pack('i',coding))
 
@@ -127,9 +124,8 @@ with open("test.bin", "br") as f:
         dude = f.read(4)
         if not dude:
             break
-        print(dude)
-        dude = struct.unpack('i', dude)[0]
-        print('dude', dude)
+        # print(dude)
+        dude = struct.unpack('i', dude)[0] # gives 81 (decimal)
+        # print('dude', dude)
         decoded_file.write(coding2name[dude])
 
-print(coding2name)
