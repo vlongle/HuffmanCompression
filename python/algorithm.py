@@ -16,6 +16,8 @@ class Huffman_node:
         self.right_child = right_child
         self.coding = coding
 
+    def __lt__(self, other): # overriding the comparison obj1 < obj2
+        return self.freq < other.freq
 
 # Read in the txt file and convert it to a dictionary of occurrence
 # of each char
@@ -28,7 +30,8 @@ def txt2dict(file_path):
 def priority_queue(freq_distr):
     heap = []
     for key, value in dict(freq_distr).items():
-        heapq.heappush(heap, (value, key))
+        new_node = Huffman_node(key, value)
+        heapq.heappush(heap, (value, new_node))
     return heap
 
 # Make the Huffman_tree
@@ -36,16 +39,8 @@ def priority_queue(freq_distr):
 # = [( total # of all character occurrences, 'sum')]
 def Huffman_tree(heap):
     while(len(heap)>1):
-        elem1 = heapq.heappop(heap)
-        elem2 = heapq.heappop(heap)
-        if not isinstance(elem1[1],Huffman_node):
-            elem1_node = Huffman_node(elem1[1],elem1[0])
-        else:
-            elem1_node = elem1[1]
-        if not isinstance(elem2[1],Huffman_node):
-            elem2_node = Huffman_node(elem2[1],elem2[0])
-        else:
-            elem2_node = elem2[1]
+        elem1_node = heapq.heappop(heap)[1]
+        elem2_node = heapq.heappop(heap)[1]
 
         parent = Huffman_node('sum', elem1_node.freq + elem2_node.freq, elem1_node, elem2_node)
         elem1_node.parent = parent
@@ -60,7 +55,6 @@ def tree2codingDict(tree): # feed topNode of the tree in
     q = queue.Queue()
     q.put(tree)
     name2coding = {}
-    coding2name = {}
     while (q.qsize() != 0):
         parent = q.get()
         left_child = parent.left_child
@@ -71,7 +65,6 @@ def tree2codingDict(tree): # feed topNode of the tree in
             q.put(left_child)
             if left_child.name != 'sum':
                 name2coding[left_child.name] = left_child.coding
-                coding2name[left_child.coding] = left_child.name
 
 
         if right_child != None:
@@ -79,10 +72,9 @@ def tree2codingDict(tree): # feed topNode of the tree in
             q.put(right_child)
             if right_child.name != 'sum':
                 name2coding[right_child.name] = right_child.coding
-                coding2name[right_child.coding] = right_child.name
 
 
-    return (name2coding, coding2name)
+    return (name2coding, tree)
 
 def startHuffman(file_path):
     freq_distr = txt2dict(file_path)

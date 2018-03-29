@@ -1,26 +1,39 @@
-import bitstring
+import  bitstring
+import algorithm
 
-def decompress(file_path, file_store, coding2name): # the table must be transmitted
-    decoded_file = open(file_store, 'w')
 
-    with open(file_path, "br") as f:
+
+
+def decompress(coded_file, decoded_file, tree):
+    string = ''
+    dec_file = open(decoded_file, 'w')
+    with open(coded_file, 'br') as coded_file:
         while True:
-            byte = f.read(4) # read 2 bytes
+            byte = coded_file.read(1) # read 1 byte at a time
             if not byte:
-                print("exiting at byte", byte)
                 break
-            # print('byte', byte)
-            bit_arr = bitstring.BitArray(bytes = byte).bin
-            bin_decode = bit_arr[:16]
-            coding = str(bin_decode)
-            print('coding', coding)
-            padding = bit_arr[16:]
-            print('padding in 2', padding)
-            padding = int(padding,2)
-            # if padding == 8:
-            #     padding = 0
-            # print()
-            coding = coding[:16-padding] # without padding
-            char = coding2name[coding]
-            decoded_file.write(char)
+            byte = bitstring.BitArray(bytes = byte)
+            for i in range(8,0,-1):
+                tool = 1<< (i-1)
+                bit = int((int(byte.bin,2) & tool) !=0)
+                if bit == 1:
+                    string += "1"
+                else:
+                    string += "0"
+    print('string',string)
+
+    current = tree
+    for ch in string:
+        if current.left_child == None and current.right_child == None:
+            dec_file.write(current.name)
+            current = tree
+        if ch == '0' and current.left_child != None:
+            # print('left')
+            current = current.left_child
+        elif ch == '1' and current.right_child != None:
+            # print('right')
+            current = current.right_child
+    dec_file.close()
+
+
 

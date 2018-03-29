@@ -5,9 +5,16 @@ import encoder
 import decoder
 import algorithm
 
+def dict2txt(name2coding):
+    file = open('dict.txt', 'w')
+    for keys, values in name2coding.items():
+        file.write(keys + ' >> ' + values + '\n \n')
+    file.close()
 
-file_path = "hamlet.txt"
-coded_path = "decoded.bin"
-name2coding, coding2name = algorithm.startHuffman(file_path)
-encoder.compress(file_path, "coded.bin", name2coding)
-decoder.decompress(file_path, coded_path, coding2name)
+
+
+name2coding, tree = algorithm.startHuffman('hamlet.txt')
+encoder.compress('hamlet.txt', 'coded.bin', name2coding)
+decoder.decompress('coded.bin', 'decoded.txt', tree)
+
+
