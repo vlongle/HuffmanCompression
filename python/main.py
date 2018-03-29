@@ -2,11 +2,10 @@
   # Copyright © 2018 Long Le. All rights reserved.
 
 import heapq # heapq = heap queue (a.k.a priority queue)
-import numpy as np
 import nltk # Natural Language ToolKit
 import queue
 import struct
-
+import bitstring
 class Huffman_node:
     def __init__(self, name, freq, left_child = None, right_child = None, parent = None, coding = None):
         self.name = name
@@ -59,6 +58,7 @@ def tree2codingDict(tree):
     q = queue.Queue()
     q.put(tree)
     name2coding = {}
+    coding2name = {}
     while (q.qsize() != 0):
         parent = q.get()
         left_child = parent.left_child
@@ -69,17 +69,24 @@ def tree2codingDict(tree):
             q.put(left_child)
             if left_child.name != 'sum':
                 name2coding[left_child.name] = left_child.coding
+                coding2name[left_child.coding] = left_child.name
+
 
         if right_child != None:
             right_child.coding = parent.coding + '1'
             q.put(right_child)
             if right_child.name != 'sum':
                 name2coding[right_child.name] = right_child.coding
+                coding2name[right_child.coding] = right_child.name
 
-    return name2coding
+
+    return (name2coding, coding2name)
 
 def decoder():
     print("Decoding ....")
+
+
+
 
 freq_distr = txt2dict('hamlet.txt')
 print(freq_distr)
@@ -94,38 +101,55 @@ print(heap)
 dict = {}
 tree = Huffman_tree(heap)[0][1]
 
-print(tree)
-print(tree.coding)
-name2coding = tree2codingDict(tree)
-print(name2coding)
-coding2name = {int(values,2): keys for keys, values in name2coding.items()}
-print(coding2name)
+
+name2coding, coding2name = tree2codingDict(tree)
 
 
 file_path = "hamlet.txt"
 coded_file = open('test.bin', 'bw')
 with open(file_path) as f:
     while True:
-        c = f.read(1)
-        if not c:
+        char = f.read(1)
+        if not char:
             break
         # print("dict[c]",dict[c])
-        coding = int(name2coding[c],2)
-        # print("coding: ",name2coding[c],coding)
+        coding = name2coding[char] # str
+        extra_padding = (8 - len(coding)%8)%8 # extra_padding == 8
+        # when there's no padding
+        #need padding because the computer write 8 byte each
+        for i in range(extra_padding):
+            coding += '0'
+
+        bit_arr = bitstring.BitArray(bin = coding)
+        # print('extra_padding ', extra_padding)
         # https://docs.python.org/3.1/library/struct.html#format-characters
-        coded_file.write(struct.pack('i',coding))
+        extra_padding = bitstring.BitArray(bin ="{0:08b}".format(extra_padding))
+        coded_file.write(bit_arr.bytes)
+        # print('extra_padding.bytes', extra_padding.bytes)
+        coded_file.write(extra_padding.bytes)
 
 coded_file.close()
 
 decoded_file = open('decoded.txt', 'w')
-
+print('coding2name: ', coding2name)
 with open("test.bin", "br") as f:
     while True:
-        dude = f.read(4)
-        if not dude:
+        byte = f.read(2) # read 1 byte
+        if not byte:
+            print("exiting at byte", byte)
             break
-        # print(dude)
-        dude = struct.unpack('i', dude)[0] # gives 81 (decimal)
-        # print('dude', dude)
-        decoded_file.write(coding2name[dude])
+        print('byte', byte)
+        bit_arr = bitstring.BitArray(bytes = byte).bin
+        bin_decode = bit_arr[:8]
+        coding = str(bin_decode)
+        print('coding', coding)
+        padding = bit_arr[8:]
+        print('padding in 2', padding)
+        padding = int(padding,2)
+        # if padding == 8:
+        #     padding = 0
+        # print()
+        coding = coding[:8-padding] # without padding
+        char = coding2name[coding]
+        decoded_file.write(char)
 

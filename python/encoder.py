@@ -13,3 +13,12 @@ import main
 
 
 
+a = '00010011100010'
+padded_info = a[:8]
+print(a)
+print(padded_info)
+print(int(padded_info,2))
+a = a[8:]
+print(a)
+a = a[:-1]
+print('print a', a)
