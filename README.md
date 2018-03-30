@@ -1,8 +1,16 @@
 # Quick start
 This program would compress any plain text file (.txt extension) into a binary file (.bin) using __Huffman algorithm__. This helps to save space on your computer.
+If you don't have `python` or `pip` on your computer. On terminal, type
 
-To use, first fetch the program to your computer. On terminal, type
+`brew install python`
 
+This would automatically install `python` and `pip` for you.
+
+To use, first install the `bitstring` python package. On terminal, type
+
+`$ pip install bitstring`
+
+Then, fetch the program to your computer
 `$ git clone https://github.com/vlongle/HuffmanCompression.git`
 
 Then, navigate to the python folder of the program,
