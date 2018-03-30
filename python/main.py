@@ -10,10 +10,13 @@ def dict2txt(name2coding):
     for keys, values in name2coding.items():
         file.write(keys + ' >> ' + values + '\n \n')
     file.close()
+
+
 def file_name(file_path, new_extension):
     name = file_path[:file_path.find('.')] # strip away all the old extension starting from the period '.'
     name = name + '.' + new_extension
     return name
+
 
 def main():
     while True:
@@ -57,9 +60,7 @@ def main():
 
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
-# string = "hamlet.txt"
-# print(string.find('.'))
-# print(string[:6])
+
