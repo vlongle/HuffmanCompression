@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=CvfifZsmpQ4
 * Huffman Tree
 * Byte reading, bitwise manipulation
 * UTF-8 & ASCII
-
+* Serialization, Pickle module
 ## Python Bugs
 Can we write to bin file bit by bit?
 According to https://stackoverflow.com/questions/17536411/write-individual-bits-to-a-file-in-python
