@@ -1,3 +1,21 @@
+# Quick start
+This program would compress any plain text file (.txt extension) into a binary file (.bin) using __Huffman algorithm__. This helps to save space on your computer.
+
+To use, first fetch the program to your computer. On terminal, type
+
+`$ git clone https://github.com/vlongle/HuffmanCompression.git`
+
+Then, navigate to the python folder of the program,
+```
+$ cd HuffmanCompression
+$ cd python
+```
+Next, launch the app.
+`$ python main.py `
+
+
+
+
 # Huffman Compression
 Written in __C++__ and __Python__ for __Create Project CS Principle__ (ST. Anthony 18')
 ## Basic of the Algorithm:
