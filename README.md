@@ -33,7 +33,7 @@ http://bhrigu.me/blog/2017/01/17/huffman-coding-python-implementation/
 ## Regular expression
 A way to match a special sequence of words.
 
-For example, '/d' searches for all digit in a file. '/d{3}' searches for 3-digit numbers in a file.
-'[ ]' is a __character class__ which is a way to say __OR__.
+For example, `/d` searches for all digit in a file. `/d{3}` searches for 3-digit numbers in a file.
+`[ ]` is a __character class__ which is a way to say __OR__.
 
-For example, instead of writing '/d', we can write [0-9] to mean any digit from 0 to 9 (a.k.a 0 OR 1 OR 2... OR 9)
+For example, instead of writing `/d`, we can write `[0-9]` to mean any digit from 0 to 9 (a.k.a 0 OR 1 OR 2... OR 9)
