@@ -11,7 +11,35 @@ $ cd HuffmanCompression
 $ cd python
 ```
 Next, launch the app.
+
 `$ python main.py `
+
+You will see two options.
+
+
+```
+Options: 
+1. Compress Huffman (hit 1)
+2. Decompress Huffman (hit 2)
+
+```
+
+If you want to compress a file, hit 1 on the keyboard and you'll be prompted to provide the path to your text's file.
+
+`Enter the txt file's path: `
+
+Enter the path and wait for the algorithm to complete. You'll receive a bin file and a .pickle that contains necessary information for decompression.
+
+If you want to decompress a file, hit 1 on the keyboard and you'll be prompted to provide the path to your bin's file.
+
+`Enter the bin file's path: `
+
+Then provide the pickle file.
+
+`Enter the path to the pickle file (serialization of tree node): `
+
+Wait for the algorithm to complete and you'll receive back the decompressed text file. 
+
 
 
 
