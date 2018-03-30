@@ -20,7 +20,6 @@ def decompress(coded_file, decoded_file, tree):
                     string += "1"
                 else:
                     string += "0"
-    print('string',string)
 
     current = tree
     for ch in string:

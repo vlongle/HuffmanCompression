@@ -10,6 +10,10 @@ def dict2txt(name2coding):
     for keys, values in name2coding.items():
         file.write(keys + ' >> ' + values + '\n \n')
     file.close()
+def file_name(file_path, new_extension):
+    name = file_path[:file_path.find('.')] # strip away all the old extension starting from the period '.'
+    name = name + '.' + new_extension
+    return name
 
 def main():
     while True:
@@ -23,8 +27,9 @@ def main():
             print("Huffman making ...")
 
             name2coding, tree = algorithm.startHuffman(text_path)
-            encoder.compress(text_path ,text_path + '.bin' , name2coding)
-            f = open(text_path + '.pickle', 'bw')
+            bin_file = file_name(text_path, 'bin')
+            encoder.compress(text_path ,bin_file, name2coding)
+            f = open(file_name(text_path, 'pickle'), 'bw')
             pickle.dump(tree, f)
             f.close()
 
@@ -40,10 +45,11 @@ def main():
 
             pickle_f = open(pickle_f, 'br')
             tree = pickle.load(pickle_f)
-            decoder.decompress(text_path, text_path + '.txt', tree)
+            decoded = 'decoded_' + text_path
+            decoder.decompress(text_path, decoded, tree)
 
 
-            print("DONE. Your decoded file is at ", text_path + '.utf8')
+            print("DONE. Your decoded file is at ", decoded)
             break
 
         else:
@@ -54,13 +60,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-# test = algorithm.Huffman_node('test', 39)
-# f = open('f.pickle', 'wb')
-# pickle.dump(test, f)
-# print(test)
-# f.close()
-
-# f = open('f.pickle', 'rb')
-# test = pickle.load(f)
-# print(test.name)
+# string = "hamlet.txt"
+# print(string.find('.'))
+# print(string[:6])

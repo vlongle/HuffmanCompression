@@ -46,7 +46,6 @@ def Huffman_tree(heap):
         elem1_node.parent = parent
         elem2_node.parent = parent
         heapq.heappush(heap,(parent.freq,parent))
-        # print("debug")
     return heap
 
 # tranverse the Huffman tree in Breadth-first-search manner and index all the coding into a dict
@@ -80,5 +79,4 @@ def startHuffman(file_path):
     freq_distr = txt2dict(file_path)
     priority_q = priority_queue(freq_distr)
     tree = Huffman_tree(priority_q)
-    print('tree', tree)
     return tree2codingDict(tree[0][1])
