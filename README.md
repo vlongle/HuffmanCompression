@@ -7,9 +7,10 @@ https://en.wikipedia.org/wiki/Huffman_coding
 https://www.youtube.com/watch?v=CvfifZsmpQ4
 
 ## Concepts
+
 * Heap
-* Priority Queue
-* Huffman Tree
+** Priority Queue
+** Huffman Tree
 * Byte reading, bitwise manipulation
 * UTF-8 & ASCII
 * Serialization, Pickle module
