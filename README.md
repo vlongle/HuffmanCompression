@@ -1,5 +1,5 @@
 # Huffman Compression
-Written in __C++__
+Written in __C++__ and __Python__ for __Create Object CS Principle__ (ST. Anthony 18')
 ## Basic of the Algorithm:
 https://en.wikipedia.org/wiki/Huffman_coding
 
