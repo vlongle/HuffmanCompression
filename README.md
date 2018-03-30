@@ -2,13 +2,17 @@
 This program would compress any plain text file (.txt extension) into a binary file (.bin) using __Huffman algorithm__. This helps to save space on your computer.
 If you don't have `python` or `pip` on your computer. On terminal, type
 
-`brew install python`
+```
+brew install python
+```
 
 This would automatically install `python` and `pip` for you.
 
 To use, first install the `bitstring` python package. On terminal, type
 
-`$ pip install bitstring`
+```
+$ pip install bitstring
+```
 
 Then, fetch the program to your computer
 `$ git clone https://github.com/vlongle/HuffmanCompression.git`
@@ -20,7 +24,10 @@ $ cd python
 ```
 Next, launch the app.
 
-`$ python main.py `
+```
+$ python main.py 
+```
+
 
 You will see two options.
 
@@ -34,23 +41,26 @@ Options:
 
 If you want to compress a file, hit 1 on the keyboard and you'll be prompted to provide the path to your text's file.
 
-`Enter the txt file's path: `
+```
+Enter the txt file's path: 
+```
 
 Enter the path and wait for the algorithm to complete. You'll receive a bin file and a .pickle that contains necessary information for decompression.
 
 If you want to decompress a file, hit 1 on the keyboard and you'll be prompted to provide the path to your bin's file.
 
-`Enter the bin file's path: `
+```
+Enter the bin file's path: 
+```
+
 
 Then provide the pickle file.
 
-`Enter the path to the pickle file (serialization of tree node): `
+```
+Enter the path to the pickle file (serialization of tree node): 
+```
 
 Wait for the algorithm to complete and you'll receive back the decompressed text file. 
-
-
-
-
 
 # Huffman Compression
 Written in __C++__ and __Python__ for __Create Project CS Principle__ (ST. Anthony 18')
