@@ -13,7 +13,7 @@ def compress(file_path, bin_path, name2coding):
     print('bit_str',bit_str)
     with open(file_path, 'r') as txt: # bw = binary write
         while True:
-            ch = txt.read(1) # read 1 byte
+            ch = txt.read(1) # read 1 char
             if not ch:
                 break # end of file
             coding = name2coding[ch]
