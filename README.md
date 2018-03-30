@@ -8,12 +8,18 @@ https://www.youtube.com/watch?v=CvfifZsmpQ4
 
 ## Concepts
 
-* Heap
+* Huffman Algorithm
+  * Heap
   * Priority Queue
   * Huffman Tree
-* Byte reading, bitwise manipulation
-* UTF-8 & ASCII
-* Serialization, Pickle module
+* Data handling 
+  *Byte reading
+  *Bitwise manipulation
+  *UTF-8 & ASCII
+  *Serialization, Pickle module
+* Web interface
+  * Django module for Python
+  
 ## Python Bugs
 Can we write to bin file bit by bit?
 According to https://stackoverflow.com/questions/17536411/write-individual-bits-to-a-file-in-python
