@@ -13,10 +13,10 @@ https://www.youtube.com/watch?v=CvfifZsmpQ4
   * Priority Queue
   * Huffman Tree
 * Data handling 
-  *Byte reading
-  *Bitwise manipulation
-  *UTF-8 & ASCII
-  *Serialization, Pickle module
+  * Byte reading
+  * Bitwise manipulation
+  * UTF-8 & ASCII
+  * Serialization, Pickle module
 * Web interface
   * Django module for Python
   
