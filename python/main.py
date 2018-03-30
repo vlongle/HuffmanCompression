@@ -37,8 +37,8 @@ def main():
             f.close()
 
 
-            print("DONE. Your decoded file is at ", text_path + '.bin', end=' ')
-            print(". Serialization at " + text_path + '.pickle')
+            print("DONE. Your decoded file is at ", file_name(text_path, 'bin'), end=' ')
+            print(". Serialization at " + text_path + file_name(text_path, 'pickle'))
             break
 
         elif control == '2':
