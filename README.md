@@ -1,3 +1,5 @@
+_"Size matters"_ -- Gavin Belson
+
 # Quick start
 This program would compress any plain text file (.txt extension) into a binary file (.bin) using __Huffman algorithm__. This helps to save space on your computer.
 If you don't have `python` or `pip` on your computer. On terminal, type
